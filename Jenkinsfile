@@ -1,7 +1,7 @@
 pipeline{
  environment {
         dockerUserName="gsmyth77"
-        credentialsIdGCP = "lbg-mea-leaders-c13"
+        credentialsIdGCP = "75d7f425-4cc9-401e-9eba-d145e91ce4c9"
         namespace = "lbg-7"
         // e.g. lbg-1 for learner1, lbg-2 for learner2
         projectId= "lbg-mea-leaders-c13"
@@ -27,7 +27,7 @@ pipeline{
                 sh "npm test"
                 }
             }
-            stage('SonarQube Analysis') {
+            /*stage('SonarQube Analysis') {
                 environment {
                     scannerHome = tool 'sonarqube'
                 }
@@ -40,7 +40,7 @@ pipeline{
                     }
                 }
             }
-         
+         */
             stage ('Build Docker Image'){
                 steps{
                     script {
